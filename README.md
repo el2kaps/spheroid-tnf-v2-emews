@@ -159,6 +159,22 @@ The random seed of the experiment conducted and the number of the initial popula
 
 Results from past experiments can used in order to reduce the runtime of the active learning scenario. These results should be provided with a csv file named `all_exps_DD.csv` csv file in the `python` folder.
 
+##### How to use the UI
+Step 1: Move to the folder containing flask_app.py (`$ cd <name_of_folder_containing_cloned_repository>/spheroid-tnf-v2-emews/python`) <br>
+Step 2: Run `$ sudo sshfs -o allow_other <remote user>@<remote ip>:<path_to>/spheroid-tnf-v2-emews/experiments> <../experiments>` to mount MN "experiments" directory to a local directory <br>
+Step 3: Create credentials.json inside “python” directory in the form:<br>
+
+{
+
+    "hostname" : "fill with hostname",    
+    "username" : "fill with username",         
+    "password" : "fill with password",         
+ 
+}
+
+Step 4: Run `$ python3 flask_app.py` <br>
+Step 5: Visit http://localhost:5004/ to view and use the UI <br>
+
 ### Important note:
 .sh files in the `swift/` folder  set various environment parameters for the execution.
 Make sure that:
